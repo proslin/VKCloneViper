@@ -1,0 +1,36 @@
+### Headers settings
+company: no company
+
+### Xcode project settings
+project_name: vkCloneViper
+xcodeproj_path: vkClient.xcodeproj
+prefix: VK
+
+### Code generation settings section
+# The main project target name
+project_target: vkClientTests
+
+# The file path for new modules
+project_file_path: /Users/linaprosvetova/Desktop/Development/IOSAcademy/vkCloneViper
+
+# The Xcode group path to new modules
+project_group_path: /Users/linaprosvetova/Desktop/Development/IOSAcademy/vkCloneViper
+
+### Tests generation settings section
+# The tests target name
+test_target: vkClientTests
+
+# The file path for new tests
+test_file_path: /Users/linaprosvetova/Desktop/Development/IOSAcademy/vkCloneViper/vkClientTests
+
+# The Xcode group path to new tests
+test_group_path: /Users/linaprosvetova/Desktop/Development/IOSAcademy/vkCloneViper/vkClientTests
+
+### Dependencies settings section
+podfile_path: /Users/linaprosvetova/Desktop/Development/IOSAcademy/vkCloneViper
+
+### Templates
+templates:
+- {name: rviper_controller}
+- {name: mvvm_controller}
+- {name: swifty_viper}
