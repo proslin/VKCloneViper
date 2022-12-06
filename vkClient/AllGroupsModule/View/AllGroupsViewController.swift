@@ -32,7 +32,6 @@ final class AllGroupsViewController: UIViewController {
         view.backgroundColor = .systemBackground
         layoutViews()
         output?.viewIsReady()
-
     }
     
     // MARK: - Private methods
@@ -81,8 +80,8 @@ extension AllGroupsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: AllGroupCell.self)) as? AllGroupCell,
-        let group = output?.getGroupFor(row: indexPath.row) {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: AllGroupCell.self)) as? AllGroupCell,
+           let group = output?.getGroupFor(row: indexPath.row) {
             cell.set(group: group)
             return cell
         } else {
@@ -117,7 +116,7 @@ extension AllGroupsViewController: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = true
-    
+        
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

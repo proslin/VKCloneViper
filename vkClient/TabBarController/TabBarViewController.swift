@@ -9,7 +9,6 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +21,6 @@ class TabBarViewController: UITabBarController {
         let friendsModule = FriendsModule()
         let friendsVC = friendsModule.vc
         friendsVC.tabBarItem = UITabBarItem(title: "Друзья", image: UIImage(systemName: SFSymbols.friends), tag: 0)
-        
         return UINavigationController(rootViewController: friendsVC)
     }
     
@@ -30,7 +28,6 @@ class TabBarViewController: UITabBarController {
         let groupsModule = UserGroupsModule()
         let groupsVC = groupsModule.vc
         groupsVC.tabBarItem = UITabBarItem(title: "Группы", image: UIImage(systemName: SFSymbols.groups), tag: 1)
-        
         return UINavigationController(rootViewController: groupsVC)
     }
     

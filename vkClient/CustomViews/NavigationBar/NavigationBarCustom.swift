@@ -98,5 +98,4 @@ class NavigationBarCustom: UIView {
         nib.setupStyle()
         return nib
     }
-
 }

@@ -11,7 +11,6 @@ protocol UserGroupsInteractorOutput {
     func initializedData()
     func updatedData(deletions: [Int], insertions: [Int], modifications: [Int])
     func getDataFail(_ error: Error)
-    
     func getGroupsSuccess (_ groups: [GroupModel])
     func getGroupsFail(_ error: ErrorMessage)
     func groupAddedSuccess(_ groups: [GroupModel], _ group: GroupModel)

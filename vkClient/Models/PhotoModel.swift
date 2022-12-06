@@ -8,7 +8,6 @@
 import Foundation
 import RealmSwift
 
-
 struct PhotosResponse: Codable {
     let response: ResponsePhoto
 }
@@ -27,7 +26,6 @@ class PhotoModel: Object, Codable {
     @objc dynamic var photoURL: String = ""
     /// массив фотографий пользователя разных размеров содерж url и type(sizes)
     var sizes: [Sizes] = []
-   
     
     enum CodingKeys: String, CodingKey {
         case ownerId = "owner_id"

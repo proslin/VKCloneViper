@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     var output: LoginViewControllerIOutput?
     
     private lazy var webView: WKWebView = {
@@ -22,7 +22,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         layoutViews()
         output?.viewIsReady()
-
     }
     
     private func layoutViews() {
@@ -35,7 +34,6 @@ class LoginViewController: UIViewController {
             webView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-
 }
 
 extension LoginViewController: LoginViewControllerInput {

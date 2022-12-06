@@ -9,7 +9,7 @@ import UIKit
 
 final class FriendPhotoViewController: UIViewController {
     var output: FriendPhotoViewControllerOutput?
-
+    
     private let navBarContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +38,7 @@ final class FriendPhotoViewController: UIViewController {
         view.backgroundColor = .systemBackground
         layoutViews()
         output?.viewIsReady()
-
+        
     }
     
     // MARK: - Private methods
@@ -67,9 +67,8 @@ final class FriendPhotoViewController: UIViewController {
 // MARK: - FriendPhotoViewControllerInput
 extension FriendPhotoViewController: FriendPhotoViewControllerInput {
     
-    func setupNavigationBar(model:
-        NavigationBarProtocol) {
-            let _ = NavigationBarCustom.instanceFromNib(model: model, parentView: navBarContainer)
+    func setupNavigationBar(model: NavigationBarProtocol) {
+        let _ = NavigationBarCustom.instanceFromNib(model: model, parentView: navBarContainer)
     }
     
     func initData() {
@@ -81,26 +80,19 @@ extension FriendPhotoViewController: FriendPhotoViewControllerInput {
     
     func updateData(deletions: [Int], insertions: [Int], modifications: [Int]) {
         DispatchQueue.main.async {
-            self.collectionView.performBatchUpdates({ self.collectionView.insertItems(at: insertions.map({
-                        IndexPath(row: $0, section: 0) }))
-                self.collectionView.deleteItems(at: deletions.map({
-                            IndexPath(row: $0, section: 0)}))
-                self.collectionView.reloadItems(at: modifications.map({
-                            IndexPath(row: $0, section: 0) })) }, completion: nil)
-                }
-            }
+            self.collectionView.performBatchUpdates({ self.collectionView.insertItems(at: insertions.map({ IndexPath(row: $0, section: 0) }))
+                self.collectionView.deleteItems(at: deletions.map({ IndexPath(row: $0, section: 0)}))
+                self.collectionView.reloadItems(at: modifications.map({ IndexPath(row: $0, section: 0) })) }, completion: nil)
+        }
+    }
     
     
     func showLoader() {
-       // DispatchQueue.main.async {
-            self.showSpinner()
-    //}
+        self.showSpinner()
     }
     
     func removeLoader() {
-      //  DispatchQueue.main.async {
-            self.removeSpinner()
-     //   }
+        self.removeSpinner()
     }
     
     func showAlert(title: String, msg: String) {
@@ -108,8 +100,6 @@ extension FriendPhotoViewController: FriendPhotoViewControllerInput {
             self.presentAlertVC(title: title, message: msg)
         }
     }
-    
-    
 }
 
 // MARK: UICollectionViewDataSource
@@ -126,8 +116,6 @@ extension FriendPhotoViewController: UICollectionViewDataSource {
         } else {
             return UICollectionViewCell()
         }
-
-        
     }
 }
 

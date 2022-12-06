@@ -17,7 +17,6 @@ final class UserGroupsPresenter {
 
 // MARK: - UserGroupsViewControllerOutput
 extension UserGroupsPresenter: UserGroupsViewControllerOutput {
-    
     func viewIsReady() {
         view?.showLoader()
         let navBarButtonModel = NavBarButton(image: SFSymbols.plus, action: { [weak self] in
@@ -54,7 +53,6 @@ extension UserGroupsPresenter: UserGroupsViewControllerOutput {
 }
 
 extension UserGroupsPresenter: UserGroupsInteractorOutput {
-    
     func initializedData() {
         view?.initData()
     }

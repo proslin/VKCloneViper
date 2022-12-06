@@ -22,21 +22,13 @@ final class UserGroupsModule {
         presenter.view = view
         presenter.interactor = interactor
         
-        
         presenter.router = UserGroupsRouter()
-        
-        
-        
+ 
         view?.output = presenter
         interactor.output = presenter
     }
     
     public func getVC() -> UIViewController {
         vc
-    }
-    
-    public func presentModule(from vc: UIViewController) {
-        guard let view = view else { return }
-        vc.show(view, sender: nil)
     }
 }

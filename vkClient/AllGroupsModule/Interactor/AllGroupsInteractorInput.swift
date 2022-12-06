@@ -11,5 +11,4 @@ protocol AllGroupsInteractorInput {
     var output: AllGroupsInteractorOutput? { get set }
     
     func getSearchesGroup(for searchRequest: String)
-    
 }

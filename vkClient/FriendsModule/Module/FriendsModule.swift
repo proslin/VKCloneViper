@@ -30,9 +30,4 @@ final class FriendsModule {
     public func getVC() -> UIViewController {
         vc
     }
-    
-    public func presentModule(from vc: UIViewController) {
-        guard let view = view else { return }
-        vc.show(view, sender: nil)
-    }
 }

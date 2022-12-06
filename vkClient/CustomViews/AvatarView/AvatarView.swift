@@ -39,6 +39,5 @@ class AvatarView: UIView {
     
     public func setEmptyAvatarImage() {
         imageView.image = UIImage()
-    }
-    
+    }    
 }

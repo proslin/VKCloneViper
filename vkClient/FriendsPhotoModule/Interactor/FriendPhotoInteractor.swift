@@ -15,7 +15,6 @@ final class FriendPhotoInteractor{
     var photos: Results<PhotoModel>?
     var photosCount: Int = 0
 
-    
     // MARK: Private methods
     private func getPhotosFromNetwork(selectedFriendID: Int, offset: Int, isLoadingMorePhotos: Bool = false) {
         NetworkService.shared.getPhotos(for: selectedFriendID, offset: offset) { [weak self] result in

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginModule {
+final class LoginModule {
     private let view: LoginViewControllerInput?
     private var presenter: LoginPresenter
     
@@ -29,10 +29,5 @@ class LoginModule {
     
     public func getVC() -> UIViewController {
         vc
-    }
-    
-    public func presentModule(from vc: UIViewController) {
-        guard let view = view else { return }
-        vc.show(view as! UIViewController, sender: nil)
     }
 }

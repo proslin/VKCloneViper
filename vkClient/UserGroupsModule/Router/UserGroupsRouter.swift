@@ -17,6 +17,5 @@ extension UserGroupsRouter: UserGroupsRouterInput {
         let allGroupsModule = AllGroupsModule(output: output)
         let allGroupsVC = allGroupsModule.vc
         vc?.show(allGroupsVC, sender: nil)
-    }
-    
+    }    
 }
