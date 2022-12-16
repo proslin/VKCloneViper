@@ -11,4 +11,5 @@ import UIKit
 protocol LoginViewControllerIOutput: AnyObject {
     func viewIsReady()
     func authPageLoaded(vc: UIViewController)
+    func getTokenFrom(urlFragment: String)
 }

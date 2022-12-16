@@ -51,19 +51,7 @@ extension LoginViewController: WKNavigationDelegate {
             decisionHandler(.allow)
             return
         }
-        let params = fragment
-            .components(separatedBy: "&")
-            .map { $0.components(separatedBy: "=") } .reduce([String: String]()) { result, param in
-                var dict = result
-                let key = param[0]
-                let value = param[1]
-                dict[key] = value
-                return dict
-            }
-        let token = params["access_token"]
-        guard token != nil else { return }
-        Session.shared.token = token ?? " "
-        output?.authPageLoaded(vc: self)
+        output?.getTokenFrom(urlFragment: fragment)
         decisionHandler(.cancel)        
     }
     
