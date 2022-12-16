@@ -9,9 +9,9 @@ import Foundation
 import RealmSwift
 
 final class UserGroupsInteractor {
-    var output: UserGroupsInteractorOutput?
-    var token: NotificationToken?
-    var groups: Results<GroupModel>?
+    weak var output: UserGroupsInteractorOutput?
+    private var token: NotificationToken?
+    private var groups: Results<GroupModel>?
     
     
     // MARK: Private methods

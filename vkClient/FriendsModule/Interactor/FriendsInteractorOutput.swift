@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol FriendsInteractorOutput {
+protocol FriendsInteractorOutput: AnyObject {
     func initializedData()
     func updatedData(deletions: [Int], insertions: [Int], modifications: [Int])
     func getDataFail(_ error: Error)

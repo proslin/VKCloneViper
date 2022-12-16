@@ -9,11 +9,11 @@ import Foundation
 import RealmSwift
 
 final class FriendPhotoInteractor{
-    var output: FriendPhotoInteractorOutput?
-    var token: NotificationToken?
-    var friends: Results<FriendModel>?
-    var photos: Results<PhotoModel>?
-    var photosCount: Int = 0
+    weak var output: FriendPhotoInteractorOutput?
+    private var token: NotificationToken?
+    private var friends: Results<FriendModel>?
+    private var photos: Results<PhotoModel>?
+    private var photosCount: Int = 0
 
     // MARK: Private methods
     private func getPhotosFromNetwork(selectedFriendID: Int, offset: Int, isLoadingMorePhotos: Bool = false) {

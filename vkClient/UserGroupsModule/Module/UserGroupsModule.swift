@@ -11,11 +11,8 @@ final class UserGroupsModule {
     private let view: UserGroupsViewControllerInput?
     private let presenter: UserGroupsPresenter
     
-    public let vc: UserGroupsViewController
-    
     init() {
-        vc = UserGroupsViewController()
-        view = vc
+        view = UserGroupsViewController()
         let interactor = UserGroupsInteractor()
         
         presenter = UserGroupsPresenter()
@@ -28,7 +25,13 @@ final class UserGroupsModule {
         interactor.output = presenter
     }
     
-    public func getVC() -> UIViewController {
-        vc
+    public func getVC() -> UIViewController? {
+        view?.viewController
+    }
+}
+
+extension UserGroupsModule: ModulePresentable {
+    func present(from viewController: UIViewController) {
+        presenter.present(from: viewController)
     }
 }

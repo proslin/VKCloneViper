@@ -9,9 +9,9 @@ import Foundation
 import RealmSwift
 
 final class FriendsInteractor {
-    var output: FriendsInteractorOutput?
-    var token: NotificationToken?
-    var friends: Results<FriendModel>?
+    weak var output: FriendsInteractorOutput?
+    private var token: NotificationToken?
+    private var friends: Results<FriendModel>?
     
     // MARK: Private methods
     private func getFriendsFromNetwork() {

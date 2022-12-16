@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AllGroupsInteractorOutput {
+protocol AllGroupsInteractorOutput: AnyObject {
     func initializedData()
     func getSearchedGroupsSuccess(_ groups: [GroupModel])
     func getSearchedGroupsFail(_ error: ErrorMessage)

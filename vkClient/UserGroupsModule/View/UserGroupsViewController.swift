@@ -16,11 +16,13 @@ final class UserGroupsViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
     private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
         return refreshControl
     }()
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.refreshControl = refreshControl

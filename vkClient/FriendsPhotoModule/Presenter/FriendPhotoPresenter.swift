@@ -5,16 +5,23 @@
 //  Created by Lina Prosvetova on 23.11.2022.
 //
 
-import Foundation
+import UIKit
 
 final class FriendPhotoPresenter {
     weak var view: FriendPhotoViewControllerInput?
     var interactor: FriendPhotoInteractorInput!
     
-    var photos: Array<PhotoModel> = []
+    private var photos: Array<PhotoModel> = []
+    private var offset: Int = 0
+    private var allPhotosCount: Int = 0
+    
     var selectedFriendID: Int = 0
-    var offset: Int = 0
-    var allPhotosCount: Int = 0
+}
+
+extension FriendPhotoPresenter {
+    func present(from vc: UIViewController) {
+        view?.present(from: vc)
+    }
 }
 
 // MARK: - FriendsVCOutput
@@ -22,11 +29,11 @@ extension FriendPhotoPresenter: FriendPhotoViewControllerOutput {
     func viewIsReady() {
         view?.showLoader()
         let navBarButtonModel = NavBarButton(image: SFSymbols.shevron, action: {
-            self.view?.navigationController?.popViewController(animated: true)
+            self.view?.viewController.navigationController?.popViewController(animated: true)
         })
         let navBarModel = NavigationBarModel(title: "Фотографии", leftButton: navBarButtonModel)
         view?.setupNavigationBar(model: navBarModel)
-        view?.navigationController?.navigationBar.isHidden = true
+        view?.viewController.navigationController?.navigationBar.isHidden = true
         
         interactor.getPhotos(for: selectedFriendID, offset: offset, isLoadingMorePhotos: false)
         interactor.startObserving()

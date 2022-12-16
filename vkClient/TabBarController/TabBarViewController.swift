@@ -19,16 +19,20 @@ class TabBarViewController: UITabBarController {
     
     func createFriendsNC() -> UINavigationController {
         let friendsModule = FriendsModule()
-        let friendsVC = friendsModule.vc
-        friendsVC.tabBarItem = UITabBarItem(title: "Друзья", image: UIImage(systemName: SFSymbols.friends), tag: 0)
-        return UINavigationController(rootViewController: friendsVC)
+        if let friendsVC = friendsModule.getVC() {
+            friendsVC.tabBarItem = UITabBarItem(title: "Друзья", image: UIImage(systemName: SFSymbols.friends), tag: 0)
+            return UINavigationController(rootViewController: friendsVC)
+        }
+        return UINavigationController()
     }
     
     func createGroupsNC() -> UINavigationController {
         let groupsModule = UserGroupsModule()
-        let groupsVC = groupsModule.vc
-        groupsVC.tabBarItem = UITabBarItem(title: "Группы", image: UIImage(systemName: SFSymbols.groups), tag: 1)
-        return UINavigationController(rootViewController: groupsVC)
+        if let groupsVC = groupsModule.getVC() {
+            groupsVC.tabBarItem = UITabBarItem(title: "Группы", image: UIImage(systemName: SFSymbols.groups), tag: 1)
+            return UINavigationController(rootViewController: groupsVC)
+        }
+        return UINavigationController()
     }
     
     func openTabBar() {

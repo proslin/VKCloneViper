@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol AllGroupsViewControllerInput: UIViewController {
+protocol AllGroupsViewControllerInput: Presentable {
     var output: AllGroupsViewControllerOutput? { get set }
     
     func setupNavigationBar(model: NavigationBarProtocol)

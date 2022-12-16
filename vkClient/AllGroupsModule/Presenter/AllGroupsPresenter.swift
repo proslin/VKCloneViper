@@ -5,7 +5,7 @@
 //  Created by Lina Prosvetova on 28.11.2022.
 //
 
-import Foundation
+import UIKit
 
 final class AllGroupsPresenter {
     weak var view: AllGroupsViewControllerInput?
@@ -16,14 +16,20 @@ final class AllGroupsPresenter {
     private var timer: Timer?
 }
 
+extension AllGroupsPresenter {
+    func present(from vc: UIViewController) {
+        view?.present(from: vc)
+    }
+}
+
 extension AllGroupsPresenter: AllGroupsViewControllerOutput {
     func viewIsReady() {
         let navBarButtonModel = NavBarButton(image: SFSymbols.shevron, action: { [weak self] in
-            self?.view?.navigationController?.popViewController(animated: true)
+            self?.view?.viewController.navigationController?.popViewController(animated: true)
         })
         let navBarModel = NavigationBarModel(title: "", leftButton: navBarButtonModel, isSearchBar: true, searchBarPlaceholder: "введите сообщество")
         view?.setupNavigationBar(model: navBarModel)
-        view?.navigationController?.navigationBar.isHidden = true
+        view?.viewController.navigationController?.navigationBar.isHidden = true
     }
     
     func getGroupsCount() -> Int {

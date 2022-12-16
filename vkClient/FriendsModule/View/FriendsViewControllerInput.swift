@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-protocol FriendsViewControllerInput: UIViewController {
+protocol FriendsViewControllerInput: Presentable {
     var output: FriendsViewControllerOutput? { get set }
     
     func setupNavigationBar(model: NavigationBarProtocol)

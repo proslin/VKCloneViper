@@ -11,23 +11,22 @@ final class FriendPhotoModule {
     private let view: FriendPhotoViewControllerInput?
     private let presenter: FriendPhotoPresenter
     
-    public let vc: FriendPhotoViewController
-    
     init(selectedFriendId: Int) {
-        vc = FriendPhotoViewController()
-        view = vc
+        view = FriendPhotoViewController()
         let interactor = FriendPhotoInteractor()
         
         presenter = FriendPhotoPresenter()
-        presenter.view = vc
+        presenter.view = view
         presenter.interactor = interactor
         presenter.selectedFriendID = selectedFriendId
         
         view?.output = presenter
         interactor.output = presenter
     }
-    
-    public func getVC() -> UIViewController {
-        vc
+}
+
+extension FriendPhotoModule: ModulePresentable {
+    func present(from viewController: UIViewController) {
+        presenter.present(from: viewController)
     }
 }

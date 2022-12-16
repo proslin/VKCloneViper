@@ -71,6 +71,8 @@
 		70C54AFA29291C6C00094E28 /* FriendsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C54AF929291C6C00094E28 /* FriendsInteractor.swift */; };
 		70C54AFC29291D4600094E28 /* FriendsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C54AFB29291D4600094E28 /* FriendsInteractorInput.swift */; };
 		70C54AFE29291D4E00094E28 /* FriendsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C54AFD29291D4E00094E28 /* FriendsInteractorOutput.swift */; };
+		70C82B9D294C578B00D35990 /* ModulePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C82B9C294C578B00D35990 /* ModulePresentable.swift */; };
+		70C82B9F294C6AFD00D35990 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C82B9E294C6AFD00D35990 /* Presentable.swift */; };
 		70CD0B90292A7F9F0042C896 /* FriendsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CD0B8F292A7F9F0042C896 /* FriendsModule.swift */; };
 		70DD871428FED6DD00D71829 /* UserGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DD871228FED6DD00D71829 /* UserGroupCell.swift */; };
 		70DD871528FED6DD00D71829 /* UserGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DD871328FED6DD00D71829 /* UserGroupCell.xib */; };
@@ -179,6 +181,8 @@
 		70C54AF929291C6C00094E28 /* FriendsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInteractor.swift; sourceTree = "<group>"; };
 		70C54AFB29291D4600094E28 /* FriendsInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInteractorInput.swift; sourceTree = "<group>"; };
 		70C54AFD29291D4E00094E28 /* FriendsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInteractorOutput.swift; sourceTree = "<group>"; };
+		70C82B9C294C578B00D35990 /* ModulePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulePresentable.swift; sourceTree = "<group>"; };
+		70C82B9E294C6AFD00D35990 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		70CD0B8F292A7F9F0042C896 /* FriendsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModule.swift; sourceTree = "<group>"; };
 		70DD871228FED6DD00D71829 /* UserGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupCell.swift; sourceTree = "<group>"; };
 		70DD871328FED6DD00D71829 /* UserGroupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserGroupCell.xib; sourceTree = "<group>"; };
@@ -523,6 +527,7 @@
 		70B87B3D28DD8C3A00FE99DE /* vkClient */ = {
 			isa = PBXGroup;
 			children = (
+				70C82B9B294C575B00D35990 /* Protocols */,
 				70A5F5E82938AC7E00A1254D /* Support */,
 				70C2644A291CCB3B0090D62D /* Extansions */,
 				70934182290FE69C00838961 /* Services */,
@@ -593,6 +598,15 @@
 				70C54AF929291C6C00094E28 /* FriendsInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		70C82B9B294C575B00D35990 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				70C82B9C294C578B00D35990 /* ModulePresentable.swift */,
+				70C82B9E294C6AFD00D35990 /* Presentable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		70CD0B8E292A7F700042C896 /* Module */ = {
@@ -958,6 +972,7 @@
 				70FABCE0290A745E00618A98 /* NavigationBarCustom.swift in Sources */,
 				70C54AF5292912F200094E28 /* FriendsViewControllerInput.swift in Sources */,
 				709CEEE9292F969F00B7FE19 /* FriendsRouter.swift in Sources */,
+				70C82B9F294C6AFD00D35990 /* Presentable.swift in Sources */,
 				70CD0B90292A7F9F0042C896 /* FriendsModule.swift in Sources */,
 				70A52FEC292D4C20007DAA1C /* LoginViewControllerIOutput.swift in Sources */,
 				70FEB43B28EFF30200A7836F /* FriendCell.swift in Sources */,
@@ -969,6 +984,7 @@
 				70B87B3F28DD8C3A00FE99DE /* AppDelegate.swift in Sources */,
 				70A0559D2924F17900EB820B /* UIView +.swift in Sources */,
 				70C54AFC29291D4600094E28 /* FriendsInteractorInput.swift in Sources */,
+				70C82B9D294C578B00D35990 /* ModulePresentable.swift in Sources */,
 				709BCAF32934B3A800C6C344 /* AllGroupsInteractor.swift in Sources */,
 				709CEF03292FAB4E00B7FE19 /* UserGroupsViewControllerInput.swift in Sources */,
 				709341882910F6DF00838961 /* PhotoModel.swift in Sources */,

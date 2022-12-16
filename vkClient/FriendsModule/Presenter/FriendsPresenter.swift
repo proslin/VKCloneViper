@@ -5,13 +5,20 @@
 //  Created by Lina Prosvetova on 19.11.2022.
 //
 
-import Foundation
+import UIKit
 
 final class FriendsPresenter {
     weak var view: FriendsViewControllerInput?
     var interactor: FriendsInteractorInput!
     var router: FriendsRouterInput!
-    var friends: Array<FriendModel> = []
+    
+    private var friends: Array<FriendModel> = []
+}
+
+extension FriendsPresenter {
+    func present(from vc: UIViewController) {
+        view?.present(from: vc)
+    }
 }
 
 // MARK: - FriendsVCOutput
@@ -20,7 +27,7 @@ extension FriendsPresenter: FriendsViewControllerOutput {
         view?.showLoader()
         let navBarModel = NavigationBarModel(title: "Друзья")
         view?.setupNavigationBar(model: navBarModel)
-        view?.navigationController?.navigationBar.isHidden = true
+        view?.viewController.navigationController?.navigationBar.isHidden = true
         
         interactor.getFriends()
         interactor.startObserving()

@@ -11,11 +11,8 @@ final class FriendsModule {
     private let view: FriendsViewControllerInput?
     private let presenter: FriendsPresenter
     
-    public let vc: FriendsViewController
-    
     init() {
-        vc = FriendsViewController()
-        view = vc
+        view = FriendsViewController()
         let interactor = FriendsInteractor()
         
         presenter = FriendsPresenter()
@@ -27,7 +24,13 @@ final class FriendsModule {
         interactor.output = presenter
     }
     
-    public func getVC() -> UIViewController {
-        vc
+    public func getVC() -> UIViewController? {
+        view?.viewController
+    }
+}
+
+extension FriendsModule: ModulePresentable {
+    func present(from viewController: UIViewController) {
+        presenter.present(from: viewController)
     }
 }

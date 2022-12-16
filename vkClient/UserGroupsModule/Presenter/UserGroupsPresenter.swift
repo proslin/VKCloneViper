@@ -5,14 +5,20 @@
 //  Created by Lina Prosvetova on 24.11.2022.
 //
 
-import Foundation
+import UIKit
 
 final class UserGroupsPresenter {
     weak var view: UserGroupsViewControllerInput?
     var interactor: UserGroupsInteractorInput!
     var router: UserGroupsRouterInput!
     
-    var groups: Array<GroupModel> = []
+    private var groups: Array<GroupModel> = []
+}
+
+extension UserGroupsPresenter {
+    func present(from vc: UIViewController) {
+        view?.present(from: vc)
+    }
 }
 
 // MARK: - UserGroupsViewControllerOutput
@@ -25,7 +31,7 @@ extension UserGroupsPresenter: UserGroupsViewControllerOutput {
         })
         let navBarModel = NavigationBarModel(title: "Группы", rightButton: navBarButtonModel)
         view?.setupNavigationBar(model: navBarModel)
-        view?.navigationController?.navigationBar.isHidden = true
+        view?.viewController.navigationController?.navigationBar.isHidden = true
 
         interactor.getGroupsInitial()
     }

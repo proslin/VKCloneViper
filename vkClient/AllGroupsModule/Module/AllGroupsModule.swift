@@ -11,11 +11,8 @@ final class AllGroupsModule {
     private let view: AllGroupsViewControllerInput?
     private let presenter: AllGroupsPresenter
     
-    public let vc: AllGroupsViewController
-    
     init(output: AllGroupsModuleOutput) {
-        vc = AllGroupsViewController()
-        view = vc
+        view = AllGroupsViewController()
         let interactor = AllGroupsInteractor()
         
         presenter = AllGroupsPresenter()
@@ -28,3 +25,8 @@ final class AllGroupsModule {
     }
 }
 
+extension AllGroupsModule: ModulePresentable {
+    func present(from viewController: UIViewController) {
+        presenter.present(from: viewController)
+    }
+}

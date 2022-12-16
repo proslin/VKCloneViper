@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-protocol UserGroupsViewControllerInput: UIViewController {
+protocol UserGroupsViewControllerInput: Presentable {
     var output: UserGroupsViewControllerOutput? { get set }
     
     func setupNavigationBar(model: NavigationBarProtocol)

@@ -8,8 +8,8 @@
 import Foundation
 
 final class AllGroupsInteractor {
-    var output: AllGroupsInteractorOutput?
-    var groups: Array<GroupModel>?
+    weak var output: AllGroupsInteractorOutput?
+    private var groups: Array<GroupModel>?
     
     private func getSearchedGroupsFromNetwork(searchRequest: String) {
         NetworkService.shared.getSearchGroups(for: searchRequest) { [weak self] result in
