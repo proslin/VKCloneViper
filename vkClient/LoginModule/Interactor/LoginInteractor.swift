@@ -7,11 +7,7 @@
 
 import Foundation
 
-final class LoginInteractor {
-    
-}
-
-extension LoginInteractor: LoginInteractorInput {
+final class LoginInteractor: LoginInteractorInput {
     func getVKURLRequest() -> URLRequest? {
         NetworkService.shared.getVkURLRequest()
     }

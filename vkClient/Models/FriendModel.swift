@@ -17,7 +17,7 @@ struct Response: Codable {
     let items: [FriendModel]
 }
 
-class FriendModel: Object, Codable {
+final class FriendModel: Object, Codable {
     ///имя друга
     @objc dynamic var firstName: String = ""
     ///фамилия друга

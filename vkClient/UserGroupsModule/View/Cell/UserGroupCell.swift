@@ -7,9 +7,9 @@
 
 import UIKit
 
-class UserGroupCell: UITableViewCell {
-    @IBOutlet weak var groupName: UILabel!
-    @IBOutlet weak var groupAvatar: AvatarView!
+final class UserGroupCell: UITableViewCell {
+    @IBOutlet private var groupName: UILabel!
+    @IBOutlet private var groupAvatar: AvatarView!
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

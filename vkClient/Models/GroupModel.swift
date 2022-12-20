@@ -21,7 +21,7 @@ struct ResponseGroup: Codable {
     let items: [GroupModel]
 }
 
-class GroupModel: Object, Codable {
+final class GroupModel: Object, Codable {
     ///название группы
     @objc dynamic var groupName: String = ""
     ///URLаватара

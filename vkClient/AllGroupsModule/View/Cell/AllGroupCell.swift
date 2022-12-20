@@ -7,10 +7,10 @@
 
 import UIKit
 
-class AllGroupCell: UITableViewCell {
-    @IBOutlet weak var groupName: UILabel!
-    @IBOutlet weak var groupAvatar: AvatarView!
-    @IBOutlet weak var memberCount: UILabel!
+final class AllGroupCell: UITableViewCell {
+    @IBOutlet private var groupName: UILabel!
+    @IBOutlet private var groupAvatar: AvatarView!
+    @IBOutlet private var memberCount: UILabel!
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

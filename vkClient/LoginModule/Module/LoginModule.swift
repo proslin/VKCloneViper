@@ -11,12 +11,8 @@ final class LoginModule {
     private let view: LoginViewControllerInput?
     private var presenter: LoginPresenter
     
-    public let vc: LoginViewController
-    
     init () {
-        vc = LoginViewController()
-        view = vc
-        
+        view = LoginViewController()
         let interactor = LoginInteractor()
         
         presenter = LoginPresenter()
@@ -27,7 +23,7 @@ final class LoginModule {
         view?.output = presenter
     }
     
-    public func getVC() -> UIViewController {
-        vc
+    public func getVC() -> UIViewController? {
+        view?.viewController
     }
 }

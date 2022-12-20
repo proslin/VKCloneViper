@@ -7,37 +7,11 @@
 
 import UIKit
 
-protocol NavBarButtonProtocol {
-    var image: String { get set }
-    var action: (() -> ())? { get set }
-}
-
-protocol NavigationBarProtocol {
-    var title: String { get set }
-    var leftButton: NavBarButtonProtocol? { get set }
-    var rightButton: NavBarButtonProtocol? { get set }
-    var isSearchBar: Bool { get set }
-    var searchBarPlaceholder: String { get set }
-}
-
-struct NavigationBarModel: NavigationBarProtocol {
-    var title: String
-    var leftButton: NavBarButtonProtocol?
-    var rightButton: NavBarButtonProtocol?
-    var isSearchBar: Bool = false
-    var searchBarPlaceholder: String = ""
-}
-
-struct NavBarButton: NavBarButtonProtocol {
-    var image: String
-    var action: (() -> ())?
-}
-
-class NavigationBarCustom: UIView {
-    @IBOutlet weak var leftButton: UIButton!
-    @IBOutlet private weak var pageTitle: UILabel!
-    @IBOutlet private weak var rightButton: UIButton!
-    @IBOutlet weak var searchBar: UISearchBar!
+final class NavigationBarCustom: UIView {
+    @IBOutlet private var leftButton: UIButton!
+    @IBOutlet private var pageTitle: UILabel!
+    @IBOutlet private var rightButton: UIButton!
+    @IBOutlet private var searchBar: UISearchBar!
     
     @IBAction func leftButtonTapped(_ sender: Any) {
         leftButtonAction?()
@@ -46,8 +20,8 @@ class NavigationBarCustom: UIView {
         rightButtonAction?()
     }
 
-    var leftButtonAction: (() -> ())?
-    var rightButtonAction: (() -> ())?
+    private var leftButtonAction: (() -> ())?
+    private var rightButtonAction: (() -> ())?
     
     // MARK: - Private methods
     private func setupParentViewConstraints(navigationView: NavigationBarCustom, parentView: UIView) {
@@ -97,5 +71,9 @@ class NavigationBarCustom: UIView {
         
         nib.setupStyle()
         return nib
+    }
+    
+    public func setupSearchBarDelegate(delegate: UISearchBarDelegate) {
+        searchBar.delegate = delegate
     }
 }

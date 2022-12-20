@@ -17,7 +17,7 @@ struct ResponsePhoto: Codable {
     let items: [PhotoModel]
 }
 
-class PhotoModel: Object, Codable {
+final class PhotoModel: Object, Codable {
     ///Id фото
     @objc dynamic var id: Int = 0
     ///Id владельца фото

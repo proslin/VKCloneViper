@@ -57,7 +57,7 @@ final class AllGroupsViewController: UIViewController {
 extension AllGroupsViewController: AllGroupsViewControllerInput {
     func setupNavigationBar(model: NavigationBarProtocol) {
         let navBar = NavigationBarCustom.instanceFromNib(model: model, parentView: navBarContainer)
-        navBar?.searchBar.delegate = self
+        navBar?.setupSearchBarDelegate(delegate: self)
     }
     
     func initData() {

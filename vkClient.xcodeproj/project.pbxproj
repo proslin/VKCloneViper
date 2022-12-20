@@ -73,6 +73,7 @@
 		70C54AFE29291D4E00094E28 /* FriendsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C54AFD29291D4E00094E28 /* FriendsInteractorOutput.swift */; };
 		70C82B9D294C578B00D35990 /* ModulePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C82B9C294C578B00D35990 /* ModulePresentable.swift */; };
 		70C82B9F294C6AFD00D35990 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C82B9E294C6AFD00D35990 /* Presentable.swift */; };
+		70C82BA1294CAB8000D35990 /* NavigationBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C82BA0294CAB8000D35990 /* NavigationBarModel.swift */; };
 		70CD0B90292A7F9F0042C896 /* FriendsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CD0B8F292A7F9F0042C896 /* FriendsModule.swift */; };
 		70DD871428FED6DD00D71829 /* UserGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DD871228FED6DD00D71829 /* UserGroupCell.swift */; };
 		70DD871528FED6DD00D71829 /* UserGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DD871328FED6DD00D71829 /* UserGroupCell.xib */; };
@@ -183,6 +184,7 @@
 		70C54AFD29291D4E00094E28 /* FriendsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInteractorOutput.swift; sourceTree = "<group>"; };
 		70C82B9C294C578B00D35990 /* ModulePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulePresentable.swift; sourceTree = "<group>"; };
 		70C82B9E294C6AFD00D35990 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		70C82BA0294CAB8000D35990 /* NavigationBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModel.swift; sourceTree = "<group>"; };
 		70CD0B8F292A7F9F0042C896 /* FriendsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModule.swift; sourceTree = "<group>"; };
 		70DD871228FED6DD00D71829 /* UserGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupCell.swift; sourceTree = "<group>"; };
 		70DD871328FED6DD00D71829 /* UserGroupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserGroupCell.xib; sourceTree = "<group>"; };
@@ -680,6 +682,7 @@
 			children = (
 				70FABCDD290A664700618A98 /* NavigationBarCustom.xib */,
 				70FABCDF290A745E00618A98 /* NavigationBarCustom.swift */,
+				70C82BA0294CAB8000D35990 /* NavigationBarModel.swift */,
 			);
 			path = NavigationBar;
 			sourceTree = "<group>";
@@ -1021,6 +1024,7 @@
 				70B625BD292B67FD00A459E8 /* FriendPhotoViewControllerInput.swift in Sources */,
 				70FF0CDA29192FF20071D0D0 /* RealmService.swift in Sources */,
 				70B87B4128DD8C3A00FE99DE /* SceneDelegate.swift in Sources */,
+				70C82BA1294CAB8000D35990 /* NavigationBarModel.swift in Sources */,
 				70B625C6292B693A00A459E8 /* FriendPhotoInteractorInput.swift in Sources */,
 				709BCB012934BDEC00C6C344 /* UserGroupsRouter.swift in Sources */,
 				70A52FEA292D4C12007DAA1C /* LoginViewControllerInput.swift in Sources */,

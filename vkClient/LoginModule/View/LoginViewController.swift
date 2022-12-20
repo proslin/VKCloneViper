@@ -37,6 +37,10 @@ final class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginViewControllerInput {
+    func getVC() -> UIViewController? {
+        self
+    }
+    
     func loadURLRequest(_ request: URLRequest?) {
         guard let request = request else { return }
         webView.load(request)

@@ -7,9 +7,9 @@
 
 import UIKit
 
-class FriendCell: UITableViewCell {
-    @IBOutlet weak var friendName: UILabel!
-    @IBOutlet weak var avatarView: AvatarView!
+final class FriendCell: UITableViewCell {
+    @IBOutlet private var friendName: UILabel!
+    @IBOutlet private var avatarView: AvatarView!
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

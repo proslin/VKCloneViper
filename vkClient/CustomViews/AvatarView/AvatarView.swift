@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AvatarView: UIView {
+final class AvatarView: UIView {
     
     private var imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
     

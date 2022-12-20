@@ -7,8 +7,8 @@
 
 import UIKit
 
-class FriendPhotoCell: UICollectionViewCell {
-    @IBOutlet weak var photo: UIImageView!
+final class FriendPhotoCell: UICollectionViewCell {
+    @IBOutlet private var photo: UIImageView!
 
     func set(photo: PhotoModel) {
         NetworkService.shared.downloadAvatar(from: photo.photoURL, to: self.photo)

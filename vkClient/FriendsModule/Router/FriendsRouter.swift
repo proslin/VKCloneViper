@@ -7,11 +7,7 @@
 
 import UIKit
 
-final class FriendsRouter {
-    
-}
-
-extension FriendsRouter: FriendsRouterInput {
+final class FriendsRouter: FriendsRouterInput {
     func showFriendPhotos(friendId: Int, from vc: UIViewController?) {
         guard let vc = vc else { return }
         FriendPhotoModule(selectedFriendId: friendId).present(from: vc)

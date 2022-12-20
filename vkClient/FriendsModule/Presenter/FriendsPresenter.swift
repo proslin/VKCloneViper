@@ -15,6 +15,7 @@ final class FriendsPresenter {
     private var friends: Array<FriendModel> = []
 }
 
+// MARK: - Present
 extension FriendsPresenter {
     func present(from vc: UIViewController) {
         view?.present(from: vc)

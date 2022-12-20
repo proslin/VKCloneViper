@@ -16,12 +16,14 @@ final class AllGroupsPresenter {
     private var timer: Timer?
 }
 
+// MARK: - present
 extension AllGroupsPresenter {
     func present(from vc: UIViewController) {
         view?.present(from: vc)
     }
 }
 
+// MARK: - AllGroupsViewControllerOutput
 extension AllGroupsPresenter: AllGroupsViewControllerOutput {
     func viewIsReady() {
         let navBarButtonModel = NavBarButton(image: SFSymbols.shevron, action: { [weak self] in
@@ -54,6 +56,7 @@ extension AllGroupsPresenter: AllGroupsViewControllerOutput {
     }
 }
 
+// MARK: - AllGroupsInteractorOutput
 extension AllGroupsPresenter: AllGroupsInteractorOutput {
     func initializedData() {
         view?.initData()
